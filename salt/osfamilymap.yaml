@@ -29,7 +29,7 @@ Debian:
   gitfs:
     pygit2:
       install_from_source: true
-      version: 0.22.1
+      version: 0.26.3
       git:
         require_state: false
         install_from_package: git

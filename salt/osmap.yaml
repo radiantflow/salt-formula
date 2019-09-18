@@ -25,7 +25,7 @@ Ubuntu:
   pygit2: python-pygit2
   gitfs:
     pygit2:
-      install_from_source: false
+      install_from_source: true
       git:
         require_state: false
         install_from_package: Null

@@ -25,16 +25,20 @@ pygit-deps:
       - build-essential
       - pkg-config
       - python-dev
-      - libssh-dev
+      - libssh2-1-dev
       - libffi-dev
+      - libssl-dev
+      - libxml2-dev
+      - libxslt1-dev
       - cmake
+      - zlib1g-dev
 
 dl-libgit2-src:
   archive.extracted:
     - name: {{ libgit2_settings.build_parent_dir }}
     - source: https://github.com/libgit2/libgit2/archive/v{{ libgit2_settings.version }}.tar.gz
-    - source_hash: md5={{ libgit2_settings.download_hash }}
     - archive_format: tar
+    - skip_verify: true
     - keep: True
     - if_missing: /usr/src/libgit2-{{ libgit2_settings.version }}
 
